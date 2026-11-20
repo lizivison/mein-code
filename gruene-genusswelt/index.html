@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grüne Genusswelt</title>
+  <meta name="description"
+    content="Genieße köstliche pflanzliche Gerichte für eine gesunde Ernährung und einen nachhaltigen Lebensstil.">
+
+  <meta name="author" content="Christine Hogg - karrieretutor.de">
+  <link rel="icon" type="image/x-icon" href="images/gg-logo.png">
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="assets/bootstrap-icons-1.13.2/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/style_2.css">
+  <link rel="stylesheet" href="css/sections_2.css">
+</head>
+
+<body>
+  <header>
+    <nav class="flex align-center px-2">
+      <a aria-label="zur Startseite" href="index.html"><img src="img/g-g-logo.png" alt="gruene genusswelt logo"></a>
+      <ul class="flex">
+        <li><a href="#rezepte">Rezepte</a></li>
+        <li><a href="#about">Über Uns</a></li>
+        <li><a href="#newsletter">Newsletter</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+      <div class="icons">
+        <button aria-label="suche"><i class="bi bi-search"></i></button>
+        <button aria-label="favoriten"> <i class="bi bi-heart"></i></button>
+      </div>
+      <button aria-label="menü" onclick="openNav()" class="hamburger"><i class="bi bi-list"></i></button>
+      <!-- overlay -->
+      <div id="myNav" class="class overlay px-2 py-2 display-none">
+        <button onclick="closeNav()" class="closebtn"><i class="bi bi-x-lg"></i></button>
+        <div class="overlay-content flex">
+          <ul class="flex">
+            <li><a onclick="closeNav()" href="#rezepte">Rezepte</a></li>
+            <li><a onclick="closeNav()" href="#about">Über Uns</a></li>
+            <li><a onclick="closeNav()" href="#newsletter">Newsletter</a></li>
+            <li><a onclick="closeNav()" href="#kontakt">Kontakt</a></li>
+          </ul>
+        </div>
+    </nav>
+
+    </div>
+  </header>
+  <main>
+    <section class="hero flex align-center">
+      <div class="cta px-3 py-3 flex">
+        <div>
+          <div>
+            <h1>Grüne Genusswelt</h1>
+            <p class="subheading">Entdecke die Vielfalt der nachhaltigen Küche</p>
+          </div>
+          <br>
+          <p>Genieße köstliche pflanzliche Gerichte für eine gesunde Ernährung und einen nachhaltigen
+            Lebensstil.</p>
+        </div>
+        <div class="buttons-container flex">
+          <a href="#rezepte" class="btn-primary btn">Rezepte Stöbern</a>
+          <a href="#about" class="btn-secondary btn">Mehr Erfahren</a>
+        </div>
+      </div>
+    </section>
+    <!-- Neue Rezepte -->
+    <section id="rezepte" class="neue-rezepte flex align-center py-4">
+      <h2>Neue Rezepte</h2>
+      <div class="card-container">
+        <article class="card">
+          <div>
+            <img src="img/rezept-1.jpg" alt="Eine Quinoa-Power-Bowl mit geröstetem Gemüse">
+            <h3>Quinoa-Power-Bowl mit geröstetem Gemüse</h3>
+          </div>
+          <a class="btn btn-primary" href="img/rezept-1.jpg">zum Rezept <i class="bi bi-arrow-right"></i></a>
+        </article>
+        <article class="card">
+          <div>
+            <img src="img/rezept-2.jpg" alt="Bunte Gemüsepfanne mit aromatischem Knoblauch-Dressing">
+            <h3>Bunte Gemüsepfanne mit aromatischem Knoblauch-Dressing</h3>
+          </div>
+          <a class="btn btn-primary" href="">zum Rezept <i class="bi bi-arrow-right"></i></a>
+        </article>
+        <article class="card">
+          <div>
+            <img src="img/rezept-3.jpg" alt="Eine Vegane Lasagne mit cremiger Cashew-Bechamel">
+            <h3>Vegane Lasagne mit cremiger Cashew-Bechamel</h3>
+          </div>
+          <a class="btn btn-primary" href="">zum Rezept <i class="bi bi-arrow-right"></i></a>
+        </article>
+        <article class="card">
+          <div>
+            <img src="img/rezept-4.jpg" alt="Eine Asiatische Bowl mit Teriyaki-Tofu und knackigem Gemüse">
+            <h3>Asiatische Bowl mit Teriyaki-Tofu und knackigem Gemüse</h3>
+          </div>
+          <a class="btn btn-primary" href="">zum Rezept <i class="bi bi-arrow-right"></i></a>
+        </article>
+      </div>
+    </section>
+    <!-- Über Uns -->
+    <section id="about" class="about flex justify-center align-center px-4 py-4">
+      <div>
+        <img src="img/gg-profile-pic.jpg" alt="Eine Person, die Gemüse schneidet">
+      </div>
+      <div class="about-text flex">
+        <div>
+          <h2>Über Uns</h2>
+          <p class="subheading">Leidenschaftliche Verfechter einer gesunden und nachhaltigen Ernährung</p>
+        </div>
+        <p>Wir glauben fest daran, dass veganes Essen nicht nur gut für unseren Körper, sondern auch für unseren
+          Planeten ist. Unsere Mission ist es, Menschen zu inspirieren und zu unterstützen, köstliche vegane
+          Gerichte zu entdecken und in ihren Alltag zu integrieren.</p>
+        <p>Bei Grüne Genußwelt findest du eine vielfältige Auswahl an einfachen und kreativen veganen Rezepten,
+          die sowohl erfahrene Köche als auch Anfänger ansprechen. Von herzhaften Hauptgerichten über
+          erfrischende Salate bis hin zu verlockenden Desserts - unsere Rezepte sind voller Geschmack und
+          Gesundheit.</p>
+        <p>Indem wir tierische Produkte durch köstliche pflanzliche Alternativen ersetzen, tragen wir dazu bei,
+          den ökologischen Fußabdruck zu verringern und eine nachhaltigere Zukunft für alle zu schaffen.</p>
+      </div>
+    </section>
+    <!-- Newsletter -->
+    <section id="newsletter" class="newsletter flex justify-center text-align-center px-4 py-4">
+      <div>
+        <h2>Abonniere unseren Newsletter</h2>
+        <p class="subheading">Jeden Tag ein neues Rezept in deiner Inbox. Lecker, nachhaltig und vielfältig.</p>
+      </div>
+      <form action="#" method="post" class="newsletter-form flex">
+        <div class="checkboxes flex justify-center">
+          <div class="checkbox-1 flex"><label for="weekly">Wöchentliche News</label>
+            <input type="checkbox" name="weekly" id="weekly">
+          </div>
+          <div class="checkbox-2 flex"><label for="daily">Tägliche Rezepte</label>
+            <input type="checkbox" name="daily" id="daily">
+          </div>
+        </div>
+        <div class="anmelden flex justify-center">
+          <div class="flex text-align-left">
+            <label for="email">E-Mail Adresse</label>
+            <input type="email" id="email" name="email" placeholder="E-Mail Adresse">
+          </div>
+          <button class="btn-primary btn" type="submit">Anmelden <i class="bi bi-arrow-right"></i></button>
+        </div>
+      </form>
+    </section>
+  </main>
+  <footer id="kontakt" class="flex px-4 py-4">
+    <div class="contact flex">
+      <h4>Kontakt</h4>
+      <address>Frankfurter Tor 93 <br>
+        10243 Berlin</address>
+      <div>
+        <a href="tel:019112345678">019112345678</a><br>
+        <a href="mailto:info@genuss.com">info@genuss.com</a>
+      </div>
+    </div>
+    <div class="rechtliches flex">
+      <h4>Rechtliches</h4>
+      <ul>
+        <li><a href="#">Impressum</a></li>
+        <li><a href="#">Datenschutz</a></li>
+      </ul>
+    </div>
+    <div class="social-icons flex">
+      <a aria-label="instagram" href="#"><i class="bi bi-instagram"></i></a>
+      <a aria-label="facebook" href="#"><i class="bi bi-facebook"></i></a>
+      <a aria-label="instagram" href="#"><i class="bi bi-pinterest"></i></a>
+    </div>
+  </footer>
+  <script>
+    function openNav() {
+      document.getElementById("myNav").classList.add("display-block");
+      document.querySelector("main").style.filter= "brightness(45%)";
+      document.querySelector("body").style.overflow= "hidden";
+    }
+    function closeNav() {
+      document.getElementById("myNav").classList.remove("display-block");
+      document.querySelector("main").style.filter = "brightness(100%)";
+      document.querySelector("body").style.overflow = "visible";
+    }
+  </script>
+</body>
+
+</html>
+
+</body>
+
+</html>

@@ -1,0 +1,430 @@
+/* Abschnitte der Seite */
+
+/* ===== Header ===== */
+header {
+  background: var(--white);
+}
+
+header nav {
+  min-height: var(--sp-40);
+  justify-content: space-between;
+}
+
+header nav>a {
+  flex: 1;
+}
+
+header nav>a img {
+  width: 1.6rem;
+  height: auto;
+}
+
+header nav ul {
+  gap: var(--sp-20);
+}
+
+header nav ul a:hover {
+  text-decoration: underline;
+}
+
+.icons {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--sp-08);
+}
+
+.icons button {
+  background: none;
+  border: 0;
+  padding: 0.2rem;
+  cursor: pointer;
+  color: var(--dark);
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+/* ===== Hero ===== */
+.hero {
+  min-height: 41.35rem;
+  /* ca. 827px */
+  padding: var(--sp-20) 10vw;
+  background: #c9c3b8 url("../img/gg-hero.jpg") center / cover no-repeat;
+}
+
+.cta {
+  flex-direction: column;
+  gap: var(--sp-12);
+  width: 100%;
+  max-width: 40rem;
+  /* 800px */
+  background: var(--base);
+}
+
+.cta br {
+  display: none;
+}
+
+.cta h1 {
+  margin-bottom: 0.2rem;
+}
+
+.cta>div>p:not(.subheading) {
+  margin-top: var(--sp-12);
+}
+
+.buttons-container {
+  gap: var(--sp-08);
+  flex-wrap: wrap;
+}
+
+.buttons-container .btn {
+  padding-block: 0.9rem;
+}
+
+.buttons-container .btn-secondary {
+  order: -1;
+}
+
+/* gelb zuerst, wie im Design */
+
+/* ===== Neue Rezepte ===== */
+.neue-rezepte {
+  flex-direction: column;
+  gap: var(--sp-20);
+  padding-inline: var(--sp-20);
+}
+
+.neue-rezepte h2 {
+  font-size: var(--fs-h1);
+}
+
+.neue-rezepte h2,
+.card-container {
+  width: 100%;
+  max-width: var(--container);
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--sp-20);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--sp-10);
+  padding: var(--sp-08);
+  border: 1px solid var(--light);
+  box-shadow: var(--shadow-card);
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  background: var(--light);
+}
+
+.card h3 {
+  margin-top: var(--sp-08);
+  font-size: var(--fs-h4);
+  line-height: var(--lh-body);
+  letter-spacing: 0;
+}
+
+.card .btn {
+  align-self: flex-start;
+}
+
+/* ===== Über uns ===== */
+.about {
+  gap: var(--sp-32);
+  background: var(--base);
+}
+
+.about>div:first-child {
+  flex: 1;
+}
+
+.about img {
+  width: 100%;
+  aspect-ratio: 1 / 1.15;
+  object-fit: cover;
+  border: 0.4rem solid var(--dark);
+  background: #b9a38a;
+}
+
+.about-text {
+  flex: 1.2;
+  flex-direction: column;
+  gap: var(--sp-12);
+}
+
+.about-text h2 {
+  font-size: var(--fs-h1);
+  margin-bottom: 0.2rem;
+}
+
+/* ===== Newsletter ===== */
+.newsletter {
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-20);
+}
+
+.newsletter h2 {
+  font-size: var(--fs-h1);
+  margin-bottom: 0.2rem;
+}
+
+.newsletter-form {
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-10);
+  width: 100%;
+}
+
+.checkboxes {
+  gap: var(--sp-12);
+}
+
+.checkbox-1,
+.checkbox-2 {
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.newsletter input[type="checkbox"] {
+  appearance: none;
+  width: 0.8rem;
+  height: 0.8rem;
+  margin: 0;
+  border: 2px solid var(--light);
+  background: var(--white);
+  cursor: pointer;
+}
+
+.newsletter input[type="checkbox"]:checked {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+.anmelden {
+  gap: var(--sp-08);
+  width: 100%;
+}
+
+.anmelden>div {
+  flex: 0 1 20rem;
+}
+
+.anmelden label {
+  /* nur für Screenreader sichtbar, das Design zeigt den Platzhalter */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.anmelden input {
+  width: 100%;
+  padding: 0.4rem;
+  border: 1px solid var(--dark);
+  font-size: 0.7rem;
+}
+
+.anmelden .btn {
+  padding-inline: var(--sp-20);
+}
+
+/* ===== Footer ===== */
+footer {
+  gap: var(--sp-20);
+  align-items: flex-start;
+  min-height: 10.5rem;
+  background: var(--dark);
+  color: var(--white);
+}
+
+footer h4 {
+  color: var(--white);
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.contact,
+.rechtliches {
+  flex-direction: column;
+}
+
+.social-icons {
+  gap: var(--sp-08);
+  padding-top: 0.2rem;
+  font-size: 1.1rem;
+}
+
+/*  hamburger menu */
+.hamburger {
+  display: none;
+  
+}
+ /* overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: white;
+  height: 100svh;
+  width: 50%;
+  z-index: 9999;
+}
+.overlay-content ul {
+  flex-direction: column;
+  margin: 2rem;
+  list-style-type: none;
+  padding: none;
+}
+.overlay-content a {
+  font-size: 1.2rem;
+}
+
+.closebtn i, .hamburger i {
+  font-size: 1.2rem;
+}
+
+
+/* overlay nav */
+.display-none {
+  display: none;
+}
+
+.display-block {
+  display: block;
+}
+
+
+
+/* ===== Responsive ===== */
+@media (width<=992px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about {
+    flex-direction: column;
+  }
+
+  .about>div:first-child,
+  .about-text {
+    flex: none;
+    width: 100%;
+  }
+}
+
+@media screen and (width<576px) {
+
+  h1,
+  .neue-rezepte h2,
+  .about-text h2,
+  .newsletter h2 {
+    font-size: var(--fs-h2);
+  }
+
+  .subheading {
+    font-size: 1.1rem;
+  }
+
+  /* Header: Navigation in zweiter Zeile (Hamburger-Menü benötigt zusätzliches HTML) */
+  header nav {
+    display: none;
+    flex-wrap: wrap;
+    padding-block: var(--sp-08);
+    padding-inline: var(--sp-10);
+  }
+
+  header nav ul {
+    order: 1;
+    width: 100%;
+    justify-content: center;
+    gap: var(--sp-10);
+    font-size: 0.8rem;
+    margin-top: 0.4rem;
+  }
+.hamburger {
+  display: block;
+}
+  /* Hero: Bild oben, Box unten, zentriert */
+  .hero {
+    min-height: 23rem;
+    align-items: flex-end;
+    padding: 0;
+    background-position: 70% center;
+  }
+
+  .cta {
+    max-width: none;
+    padding: var(--sp-20) var(--sp-10);
+    text-align: center;
+  }
+
+  .cta h1 {
+    font-size: 1.2rem;
+  }
+
+  .cta .subheading {
+    font-size: 0.9rem;
+  }
+
+  .cta>div>p:not(.subheading) {
+    font-size: 0.8rem;
+    margin-top: var(--sp-08);
+  }
+
+  .buttons-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .buttons-container .btn {
+    width: 11rem;
+    padding-block: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+
+  .about,
+  footer.flex {
+    padding-inline: var(--sp-10);
+    padding-block: var(--sp-20);
+  }
+
+  .anmelden {
+    flex-direction: column;
+    align-items: center;
+  }
+  .anmelden input
+  [types= "email"] {
+    width: 100%;
+  }
+
+  .anmelden div {
+    flex: none;
+    width: 100%;
+  }
+
+  footer {
+    flex-wrap: wrap;
+  }
+}

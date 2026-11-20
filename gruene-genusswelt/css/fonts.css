@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'Hind Mandurai';
+    src: url(../fonts/HindMandurai-Regular.woff2)
+    format ('woff2'), url ('../fonts/HindManudrai-Regular.woff') format ('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Hind Mandurai';
+    src: url(../fonts/HindMandurai-Bold.woff2)
+    format ('woff2'), url ('../fonts/HindManudrai-Bold.woff') format ('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Libre Baskerville';
+    src: url(../fonts/LibreBaskerville-Bold.woff2)
+    format ('woff2'), url ('../fonts/LibreBaskerville-Bold.woff') format ('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Lora';
+    src: url(../fonts/Lora-italic.woff2)
+    format ('woff2'), url ('../fonts/Lora-italic.woff') format ('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}

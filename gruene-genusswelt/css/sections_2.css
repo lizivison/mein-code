@@ -1,0 +1,431 @@
+/* ==========================================================
+   sections.css – Hero, Neue Rezepte, Über uns, Newsletter, Footer
+   Breakpoints: Desktop ab 1024px, Tablet 768–1023px, Mobil bis 767px.
+   Farbwerte (Fallbacks) sind aus den Screenshots geschätzt.
+   sections.css lädt nach style.css: bei gleicher Spezifität gewinnt
+   diese Datei gegenüber den Utilities (.px-*, .py-*).
+   ========================================================== */
+
+/* ---------- Hero ---------- */
+.hero {
+    min-height: min(60vw, 52rem);
+    padding-inline: clamp(1.5rem, 12vw, 11rem);
+    /* Bildpfad ANNAHME – an tatsächliche Datei anpassen */
+    background: url("../img/gg-hero.jpg") center / cover no-repeat;
+}
+
+.hero .cta {
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 46rem;
+    padding: 2.5rem 3rem;
+    background-color: var(--color-light, #fef0dc);
+    color: var(--color-text, #1c1c1c);
+}
+
+.hero .cta h1 {
+    margin-bottom: 0.25rem;
+}
+
+.hero .buttons-container {
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* ---------- Neue Rezepte ---------- */
+.neue-rezepte {
+    flex-direction: column;
+    gap: 2rem;
+    padding-inline: var(--space-4, 2rem);
+    background-color: var(--color-bg, #fff);
+}
+
+.neue-rezepte .card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 75rem;
+}
+
+.neue-rezepte .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.25rem;
+    padding: 1.25rem;
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.neue-rezepte .card img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+}
+
+.neue-rezepte .card h3 {
+    margin-top: 1rem;
+}
+
+.neue-rezepte .card .btn {
+    align-self: flex-start;
+}
+
+/* ---------- Über uns ---------- */
+.about {
+    gap: 3rem;
+    background-color: var(--color-light, #fef0dc);
+}
+
+.about > div:first-child {
+    flex: 0 1 34rem;
+}
+
+.about > div:first-child img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border: 0.5rem solid var(--color-frame, #2e2420);
+}
+
+.about .about-text {
+    flex: 1 1 0;
+    max-width: 38rem;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.about .about-text h2 {
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
+.about .about-text p {
+    font-size: 0.9375rem;
+}
+
+/* ---------- Newsletter ---------- */
+.newsletter {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    background-color: var(--color-bg, #fff);
+}
+
+.newsletter .subheading {
+    margin-top: 0.5rem;
+}
+
+.newsletter .newsletter-form {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    width: 100%;
+}
+
+.newsletter .checkboxes {
+    flex-wrap: wrap;
+    gap: 0.75rem 1.5rem;
+}
+
+/* Im HTML steht das Label vor der Checkbox; der Screenshot zeigt die
+   Checkbox links -> Reihenfolge per row-reverse umgekehrt. */
+.newsletter .checkbox-1,
+.newsletter .checkbox-2 {
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.newsletter input[type="checkbox"] {
+    width: 1rem;
+    height: 1rem;
+    accent-color: var(--color-primary, #0e5e55);
+}
+
+.newsletter .anmelden {
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 0.75rem;
+}
+
+.newsletter .anmelden > div {
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.newsletter .anmelden label {
+    font-size: 0.75rem;
+}
+
+.newsletter input[type="email"] {
+    width: 16rem;
+    max-width: 100%;
+    padding: 0.6rem 0.75rem;
+    border: 1px solid #9a9a9a;
+    border-radius: 0.125rem;
+    background-color: #fff;
+    color: var(--color-text, #1c1c1c);
+}
+
+/* ---------- Footer ---------- */
+footer {
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 3rem 5rem;
+    background-color: var(--color-dark, #4b4748);
+    color: #fff;
+}
+
+footer h4 {
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+}
+
+footer .contact,
+footer .rechtliches {
+    flex-direction: column;
+    font-size: 0.875rem;
+}
+
+footer address {
+    font-style: normal;
+    margin-bottom: 0.75rem;
+}
+
+footer .contact a,
+footer .rechtliches a {
+    color: #d9d6d6;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .social-icons {
+    gap: 1.25rem;
+    padding-top: 0.25rem;
+    font-size: 1.5rem;
+}
+
+footer .social-icons a:hover {
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+/* ==========================================================
+   Tablet und kleiner (bis 1023px)
+   ========================================================== */
+@media (max-width: 1023px) {
+
+    /* Hero: Box oben mittig, Text zentriert, Buttons untereinander */
+    .hero {
+        min-height: 60vh;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 3rem var(--space-4, 2rem) 2rem;
+    }
+
+    .hero .cta {
+        max-width: 23.5rem;
+        padding: 2rem 1.75rem;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Reihenfolge laut Screenshot: orange Button oben (UNSICHER, s. Hinweis) */
+    .hero .buttons-container {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .hero .buttons-container .btn {
+        min-width: 10rem;
+    }
+
+    /* Rezepte: 2 Spalten */
+    .neue-rezepte .card-container {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 46rem;
+    }
+
+    /* Über uns: Bild oben, Text darunter */
+    .about {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 2rem;
+    }
+
+    .about > div:first-child {
+        flex: none;
+        width: 100%;
+    }
+
+    .about > div:first-child img {
+        aspect-ratio: 4 / 3;
+    }
+
+    .about .about-text {
+        flex: none;
+        max-width: none;
+    }
+
+    /* Footer: Kontakt und Rechtliches links, Icons rechts */
+    footer {
+        justify-content: flex-start;
+        gap: 2rem 4rem;
+    }
+
+    footer .social-icons {
+        margin-left: auto;
+    }
+}
+
+@media screen and (width<576px) {
+
+  h1,
+  .neue-rezepte h2,
+  .about-text h2,
+  .newsletter h2 {
+    font-size: var(--fs-h2);
+  }
+
+  .subheading {
+    font-size: 1.1rem;
+  }
+
+  /* Header: Navigation in zweiter Zeile (Hamburger-Menü benötigt zusätzliches HTML) */
+  header nav {
+    display: none;
+    flex-wrap: wrap;
+    padding-block: var(--sp-08);
+    padding-inline: var(--sp-10);
+  }
+
+  header nav ul {
+    order: 1;
+    width: 100%;
+    justify-content: center;
+    gap: var(--sp-10);
+    font-size: 0.8rem;
+    margin-top: 0.4rem;
+  }
+.hamburger {
+  display: block;
+}
+  /* Hero: Bild oben, Box unten, zentriert */
+  .hero {
+    min-height: 23rem;
+    align-items: flex-end;
+    padding: 0;
+    background-position: 70% center;
+  }
+
+  .cta {
+    max-width: none;
+    padding: var(--sp-20) var(--sp-10);
+    text-align: center;
+  }
+
+  .cta h1 {
+    font-size: 1.2rem;
+  }
+
+  .cta .subheading {
+    font-size: 0.9rem;
+  }
+
+  .cta>div>p:not(.subheading) {
+    font-size: 0.8rem;
+    margin-top: var(--sp-08);
+  }
+
+  .buttons-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .buttons-container .btn {
+    width: 11rem;
+    padding-block: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+
+  .about,
+  footer.flex {
+    padding-inline: var(--sp-10);
+    padding-block: var(--sp-20);
+  }
+
+  .anmelden {
+    flex-direction: column;
+    align-items: center;
+  }
+  .anmelden input
+  [types= "email"] {
+    width: 100%;
+  }
+
+  .anmelden div {
+    flex: none;
+    width: 100%;
+  }
+
+  footer {
+    flex-wrap: wrap;
+  }
+}
+
+/* Overlay nur im Mobil-Layout; bei breiterem Fenster nie sichtbar */
+@media (min-width: 768px) {
+    .overlay {
+        display: none !important;
+    }
+}
+
+@media (max-width: 767px) {
+    header nav {
+        flex-wrap: nowrap;
+        min-height: 4rem;
+        gap: 0.5rem;
+    }
+
+    header nav > a img {
+        height: 2.25rem;
+    }
+
+    header nav > ul.flex {
+        display: none;
+    }
+
+    header .icons {
+        flex: 0 0 auto;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+/* ---------- Anzeige-Klassen für das Script (openNav/closeNav) ----------
+   Das Overlay trägt beim Laden "display-none"; openNav() ergänzt
+   "display-block". Beide Klassen haben gleiche Spezifität, deshalb
+   MUSS display-block nach display-none stehen. */
+.display-none { display: none; }
+.display-block { display: block; }
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; }
+}

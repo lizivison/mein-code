@@ -1,0 +1,39 @@
+/* Design Tokens laut Styleguide */
+:root {
+  /* Farben */
+  --primary: #116156;   /* Logo, Call-to-actions, Highlights */
+  --secondary: #edaa05; /* sekundäre CTAs */
+  --base: #fff3e3;      /* Hintergrund */
+  --light: #e0e0e0;     /* Checkbox */
+  --dark: #424242;      /* Textfarbe */
+  --white: #ffffff;
+
+  /* Schriften */
+  --font-head: "Libre Baskerville", Georgia, serif;
+  --font-byline: "Lora", Georgia, serif;
+  --font-body: "Hind Madurai", Arial, sans-serif;
+
+  /* Typescale (1rem = 20px) */
+  --fs-h1: 3.375rem;   /* 67,5px */
+  --fs-h2: 2.25rem;    /* 45px */
+  --fs-byline: 1.5rem; /* 30px */
+  --fs-h3: 1.5rem;     /* 30px */
+  --fs-h4: 1rem;       /* 20px */
+  --fs-body: 1rem;     /* 20px */
+  --ls-head: -0.02em;
+  --lh-head: 1.2;
+  --lh-body: 1.5;
+
+  /* Spacing */
+  --sp-08: 0.8rem; /* 16px */
+  --sp-10: 1rem;   /* 20px */
+  --sp-12: 1.2rem; /* 24px */
+  --sp-20: 2rem;   /* 40px */
+  --sp-24: 2.4rem; /* 48px */
+  --sp-32: 3.2rem; /* 64px */
+  --sp-40: 4rem;   /* 80px */
+
+  /* Layout */
+  --container: 60.5rem;
+  --shadow-card: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
